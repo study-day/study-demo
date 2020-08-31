@@ -4,29 +4,39 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	version="3.1" metadata-complete="true">
-
+	version="3.1" ><!-- metadata-complete="true" -->
+<!--metadata-complete="true" 如果想使用注解方式定义servlet 则不能写这一句，这一句的意思是完全使用配置文件  -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<display-name>Archetype Created Web Application</display-name>
 
 	<!-- jsp中通过application 参数接收 -->
+
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://127.0.0.1:3306/kettle</param-value>
+	</context-param>
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>kettle</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>kettle</param-value>
+	</context-param>
+<!-- 同一个servet 只能使用注解或者xml配置方式实现。对于不通的servet，在项目中两种方式可以同时存在。-->
+ 	<servlet>
+	<servlet-name>Servlet2</servlet-name>
+	<servlet-class>com.studyday.studyjsp.Servlet2</servlet-class>
+	</servlet>
 	
-<context-param>
-<param-name>driver</param-name>
-<param-value>com.mysql.jdbc.Driver</param-value>
-</context-param>
-<context-param>
-<param-name>url</param-name>
-<param-value>jdbc:mysql://127.0.0.1:3306/kettle</param-value>
-</context-param>
-<context-param>
-<param-name>user</param-name>
-<param-value>kettle</param-value>
-</context-param>
-<context-param>
-<param-name>pass</param-name>
-<param-value>kettle</param-value>
-</context-param>
+	<servlet-mapping>
+	<servlet-name>Servlet2</servlet-name>
+	<url-pattern>/servlet2</url-pattern>
+	</servlet-mapping>  
 </web-app>
