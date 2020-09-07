@@ -16,10 +16,10 @@
 	</modules>
 
 	<properties>
-	<junit.version>4.12</junit.version>
-	<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
-	<mysql.version>5.1.47</mysql.version>
-	<versions-maven-plugin.version>2.7</versions-maven-plugin.version>
+		<junit.version>4.12</junit.version>
+		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+		<mysql.version>5.1.47</mysql.version>
+		<versions-maven-plugin.version>2.7</versions-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -51,6 +51,9 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
 					<version>${versions-maven-plugin.version}</version>
+					<configuration>
+						<generateBackupPoms>false</generateBackupPoms>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
