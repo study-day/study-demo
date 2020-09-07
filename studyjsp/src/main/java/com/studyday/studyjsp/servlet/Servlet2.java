@@ -22,7 +22,7 @@ public class Servlet2 extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 
 	 
 		System.out.println("get! welcome");
 		resp.setContentType("text/html; charset=UTF-8");
@@ -36,19 +36,5 @@ public class Servlet2 extends HttpServlet {
 	
 	}
 	
-//	@Override
-//	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		// TODO Auto-generated method stub
-//		//super.doPost(req, resp);
-//		resp.setContentType("text/html;charSet=GBK");
-//		System.out.println("get! welcome");
-//		PrintStream printStream = new PrintStream(resp.getOutputStream());
-//		printStream.println("<html>");
-//		printStream.println("<h2>");
-//		printStream.println("Welcom! this is servlet2,");
-//		printStream.println("</h2>");
-//		printStream.println("</html>");
-//
-//	}
 	
 }

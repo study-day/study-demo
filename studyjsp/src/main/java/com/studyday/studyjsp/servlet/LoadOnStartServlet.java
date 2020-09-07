@@ -31,7 +31,7 @@ public class LoadOnStartServlet extends HttpServlet {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
 			System.out.println(new Date());	
 			}
 		}).start();

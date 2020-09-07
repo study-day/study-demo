@@ -31,7 +31,7 @@ public class Servlet3 extends HttpServlet {
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 
 		// 不要调用父方法 会出现HTTP状态 405 - 方法不允许
 		//super.service(req, resp);
 		ServletConfig servletConfig = getServletConfig();
@@ -55,10 +55,10 @@ public class Servlet3 extends HttpServlet {
 			
 			resp.getOutputStream().print(html);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			// 
 			e.printStackTrace();
 		}
 		
