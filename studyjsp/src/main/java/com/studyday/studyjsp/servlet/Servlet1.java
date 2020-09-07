@@ -1,4 +1,4 @@
-package com.studyday.studyjsp;
+package com.studyday.studyjsp.servlet;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 使用注解发布
- * @author lq
+ * 
+ * @author study-day
  *
  */
 @WebServlet(name="Servlet1",urlPatterns = {"/myservlet1"})

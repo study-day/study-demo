@@ -24,7 +24,7 @@ session：是放在web服务器上的，所以要求session里的属性是可序
 1.2 使用web.xml  OK
 1.3 写和项目一起启动。
 1.4 filter，listener
-2.1 把C语言的小工具也写上
+
 
 总结
 1.<!--metadata-complete="true" 如果想使用注解方式定义servlet 则不能写这一句，这一句的意思是完全使用配置文件  -->

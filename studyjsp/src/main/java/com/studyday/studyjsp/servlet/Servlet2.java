@@ -1,4 +1,4 @@
-package com.studyday.studyjsp;
+package com.studyday.studyjsp.servlet;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * web.xml 配置发布的servlet
- * @author lq
+ * @author study-day
  *
  */
 public class Servlet2 extends HttpServlet {
