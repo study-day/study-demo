@@ -16,10 +16,13 @@
 	</modules>
 
 	<properties>
+	    <!-- 依赖版本 -->
 		<junit.version>4.12</junit.version>
 		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
 		<mysql.version>5.1.47</mysql.version>
+		<!-- 插件版本 -->
 		<versions-maven-plugin.version>2.7</versions-maven-plugin.version>
+		<maven-assembly-plugin.version>3.0.0</maven-assembly-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -54,6 +57,31 @@
 					<configuration>
 						<generateBackupPoms>false</generateBackupPoms>
 					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven-assembly-plugin.version}</version>
+					<!--<configuration>
+						 <archive>
+							<manifest>
+								<mainClass>com.example.demo.official.Sftp</mainClass>
+							</manifest>
+						</archive> 
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+					</configuration>-->
+				<!-- 	<executions>
+						<execution>
+							<id>make-assembly</id> this is used for inheritance merges
+							<phase>package</phase> 指定在打包节点执行jar包合并操作
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions> -->
 				</plugin>
 			</plugins>
 		</pluginManagement>
