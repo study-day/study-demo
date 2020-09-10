@@ -309,3 +309,13 @@ Exception in thread "main" java.lang.NoSuchMethodError: com.studyday.study.Cherr
 在实现2 的基础上打包发现只有一个Cherry.class。且使用的是study-e里面的。在查看pom依赖顺序，A中依赖的C和B。C在B前，且C依赖的是E，而E中的方法名字刚好是getName()。从打包的角度对实验进行了验证。
 
 ![image-20200908101212778](readme-img/3.png)
+
+
+
+实验1的打包结果对比
+
+![image-20200908142445099](readme-img/4.png)
+
+通过依赖分析，也可以发现，不同版本的同一个jar在依赖分析时会提示已经被忽略
+
+![image-20200908142849951](readme-img/5.png)
