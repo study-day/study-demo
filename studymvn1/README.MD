@@ -41,6 +41,29 @@ $CATALINA_BASE/shared目录下按照文件夹的顺序从上往下依次加载
 项目路径/WEB-INF/classes下的class文件
 项目路径/WEB-INF/lib下的jar文件
 ```
+WEB-INF/lib下的jar是如何排序的？
+
+网上搜索看到tomcat5-7对于WEB-INF/lib下的jar的搜索会按字母排序，tomcat8以上不会排序，依赖文件系统随机返回文件列表，这样的话tomcat8在不同的机器上可能出现运行时加载类混乱的问题（存在不同jar有相同类），从而发生诡异的问题。现在我们预发和线上都是tomcat8.x.x版本，所以类加载存在不确定性。所以原来smc存在以上2个jar包，运行到我的接口的时候预发优先加载了正确的类没问题，但是到了线上优先加载了另外的类，从而导致返回了错误的结果。
+```
+Tomcat8.0后同一目录下的jar包加载顺序有变化，不像以前一样是按照字母顺序排序了，
+
+导致了项目在某些机器启动正常，某些机器上类加载顺序不对导致的NoClassDefFoundError
+
+的错误，根本原因是某些低质量的jar包冲突导致的，一旦这些包都是第三方的包尤其是第三方厂商
+
+的包，很难去进行替换。这是就需要某种方法强行将某个包的加载顺序提到前面来，这是可以在
+
+tomcat的conf目录下修改context.xml文件，加上如下语句就可以办到了：
+
+    <Resources>
+        <PreResources className="org.apache.catalina.webresources.FileResourceSet"                
+                base="${catalina.base}/webapps/你的项目名称/WEB-INF/lib/提到前面来的冲突jar包名.jar"                 
+                webAppMount="/WEB-INF/lib/提到前面来的冲突jar包名.jar" />
+    </Resources>
+```
+    
+
+
 这个也解释了为什么 自定义java可以覆盖 jar里的文件了。
 
 延申：https://www.cnblogs.com/lanxuezaipiao/p/4138511.html
