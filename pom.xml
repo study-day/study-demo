@@ -13,6 +13,7 @@
 		<module>studymvn2</module>
     <module>studyfile</module>
     <module>studymvn3</module>
+    <module>studythread</module>
   </modules>
 
 	<properties>
