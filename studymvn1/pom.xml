@@ -1,64 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sutdyday</groupId>
+        <artifactId>studydemo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
     <groupId>com.sutdyday</groupId>
-    <artifactId>studydemo</artifactId>
+    <artifactId>studymvn1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <packaging>pom</packaging>
-  <groupId>com.sutdyday</groupId>
-  <artifactId>studymvn1</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>studymvn1</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <modules>
-    <module>a</module>
-    <module>b</module>
-    <module>c</module>
-    <module>study-a</module>
-    <module>study-b</module>
-    <module>study-c</module>
-    <module>study-d</module>
-    <module>study-e</module>
-  </modules>
-  
-  <build>
-  <plugins>
-  <plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					 <configuration>
-						 <archive>
-							<manifest>
-								<mainClass>com.studyday.study.Dinner</mainClass>
-							</manifest>
-						</archive> 
-						<descriptorRefs>
-							<descriptorRef>jar-with-dependencies</descriptorRef>
-						</descriptorRefs>
-					</configuration> 
-				  	<executions>
-						<execution>
-							<id>make-assembly</id> <!-- this is used for inheritance merges -->
-							<phase>package</phase> <!-- 指定在打包节点执行jar包合并操作 -->
-							<goals>
-								<goal>single</goal>
-							</goals>
-						</execution>
-					</executions>  
-				</plugin>
-  </plugins>
-  </build>
+    <name>studymvn1</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <modules>
+        <module>a</module>
+        <module>b</module>
+        <module>c</module>
+        <module>study-a</module>
+        <module>study-b</module>
+        <module>study-c</module>
+        <module>study-d</module>
+        <module>study-e</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.studyday.study.Dinner</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- 指定在打包节点执行jar包合并操作 -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
