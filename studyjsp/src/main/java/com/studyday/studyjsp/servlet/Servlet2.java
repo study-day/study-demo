@@ -11,30 +11,30 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * web.xml 配置发布的servlet
- * @author study-day
  *
+ * @author study-day
  */
 public class Servlet2 extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// 
-	 
-		System.out.println("get! welcome");
-		resp.setContentType("text/html; charset=UTF-8");
-		PrintStream printStream = new PrintStream(resp.getOutputStream());
-		printStream.println("<html>");
-		printStream.println("<h2>");
-		printStream.println("Welcom! this is servlet2,");
-		printStream.println("</h2>");
-		printStream.println("</html>");
-		
-	
-	}
-	
-	
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //
+
+        System.out.println("get! welcome");
+        resp.setContentType("text/html; charset=UTF-8");
+        PrintStream printStream = new PrintStream(resp.getOutputStream());
+        printStream.println("<html>");
+        printStream.println("<h2>");
+        printStream.println("Welcom! this is servlet2,");
+        printStream.println("</h2>");
+        printStream.println("</html>");
+
+
+    }
+
+
 }
