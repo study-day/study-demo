@@ -1,4 +1,4 @@
-package com.sutdyday.studythread;
+package com.studyday.studythread;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

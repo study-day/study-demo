@@ -1,4 +1,4 @@
-package com.sutdyday.studythread;
+package com.studyday.studythread;
 
 import java.util.List;
 import java.util.Random;

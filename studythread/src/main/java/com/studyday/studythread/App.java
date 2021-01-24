@@ -1,4 +1,4 @@
-package com.sutdyday.studythread;
+package com.studyday.studythread;
 
 /**
  * 异常会不会让程序终止？ 异常会让一个main程序终止。
