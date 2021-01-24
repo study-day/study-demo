@@ -25,7 +25,7 @@ Exception in thread "main" java.util.concurrent.RejectedExecutionException: Task
 	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
 	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
 	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest.main(FixThreadPoolExecutorTest.java:65)
+	at FixThreadPoolExecutorTest.main(FixThreadPoolExecutorTest.java:65)
 ```
 
 8.shutdonNow()会终端线程的sleep操作。和shutdown一样，不会接收之后提交的任务。**同时shutdownNow还不会执行队列中的任务。因为他的日志里没有包含@@的打印日志。**
@@ -226,7 +226,7 @@ pool-1-thread-2--4
 pool-1-thread-1--4
 pool-1-thread-3--4
 Exception in thread "pool-1-thread-2" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -255,7 +255,7 @@ pool-1-thread-3--4
 pool-1-thread-1--4
 pool-1-thread-3--4
 Exception in thread "pool-1-thread-4" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$2.run(FixThreadPoolExecutorTest.java:66)
+	at FixThreadPoolExecutorTest$2.run(FixThreadPoolExecutorTest.java:66)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -279,7 +279,7 @@ pool-1-thread-3--3
 第87次检查
 pool-1-thread-1--3
 Exception in thread "pool-1-thread-3" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -412,7 +412,7 @@ pool-1-thread-1--2
 第172次检查
 第173次检查
 Exception in thread "pool-1-thread-1" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:43)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -431,26 +431,26 @@ shutdownNow()典型日志
 第0次检查
 java.lang.InterruptedException: sleep interrupted
 	at java.lang.Thread.sleep(Native Method)
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
 java.lang.InterruptedException: sleep interrupted
 	at java.lang.Thread.sleep(Native Method)
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
 java.lang.InterruptedException: sleep interrupted
 	at java.lang.Thread.sleep(Native Method)pool-1-thread-1--4
 
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:28)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
 Exception in thread "pool-1-thread-2" pool-1-thread-3--4
 java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -529,7 +529,7 @@ pool-1-thread-3--3
 第37次检查
 pool-1-thread-1--3
 Exception in thread "pool-1-thread-3" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
@@ -635,7 +635,7 @@ pool-1-thread-1--2
 第104次检查
 第105次检查
 Exception in thread "pool-1-thread-1" java.lang.ArithmeticException: / by zero
-	at com.sutdyday.studythread.FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
+	at FixThreadPoolExecutorTest$1.run(FixThreadPoolExecutorTest.java:34)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)

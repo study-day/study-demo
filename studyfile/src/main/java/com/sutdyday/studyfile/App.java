@@ -16,9 +16,10 @@ public class App {
 //    	fileList.forEach(file->
 //    	System.out.println(file.replace("D:\\Users\\lq\\Desktop\\差异对比0914\\0.92\\", ""))
 //    	);
-        String selectDir = "D:\\Users\\lq\\Desktop\\差异对比0914\\0.92";
-        String targetDir = "D:\\test\\gitlab2\\yhdesp-0.91";
-        selectBatch2Del(selectDir, targetDir);
+//        String selectDir = "D:\\Users\\lq\\Desktop\\差异对比0914\\0.92";
+//        String targetDir = "D:\\test\\gitlab2\\yhdesp-0.91";
+//        selectBatch2Del(selectDir, targetDir);
+        System.out.println(13);
     }
 
     /**

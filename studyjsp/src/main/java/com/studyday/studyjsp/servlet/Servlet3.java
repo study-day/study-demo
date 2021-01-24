@@ -19,7 +19,6 @@ import com.mysql.jdbc.Driver;
 /**
  * web.xml 配置发布的servlet ，使用servlet的配置参数
  *
- * @author lq
  */
 public class Servlet3 extends HttpServlet {
     /**

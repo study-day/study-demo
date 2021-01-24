@@ -14,7 +14,8 @@
     <module>studyfile</module>
     <module>studymvn3</module>
     <module>studythread</module>
-  </modules>
+        <module>studyehcache</module>
+    </modules>
 
 	<properties>
 	    <!-- 依赖版本 -->
